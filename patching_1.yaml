@@ -1,1 +1,13 @@
 # This playbook is going to patch all servers.
+---
+- name: patching servers
+  hosts: salmaan
+  gather_facts: no
+  tasks:
+    - name: patching
+      dnf: 
+        name: "*"
+        state: latest
+
+
+# this code is written by moiz
